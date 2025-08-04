@@ -10,6 +10,7 @@
 
   --Teal_100: hsl(204, 43%, 93%);
   --Gray_500: hsl(218, 22%, 67%);
+  --Gray_mid: rgb(229, 233, 238);
 }
 
 * {
@@ -31,15 +32,12 @@ body {
 main {
   background-color: white;
   border-radius: 5px;
-  padding: 2rem;
-  /* display: flex;
-  flex-direction: column;
-  gap: 1rem; */
 }
 
 .header {
   background-color: white;
   border-radius: 5px;
+  padding: 1.8rem;
 }
 .header h1 {
   color: var(--Teal_500);
@@ -54,7 +52,7 @@ main {
 .header p {
   color: var(--Gray_500);
   line-height: 1.5;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .pricing {
@@ -64,11 +62,69 @@ main {
 }
 .pricing__card {
   background-color: var(--Teal_500);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.8rem;
 }
-.pricing__card h2{
-    
+.pricing__card h2 {
+  font-size: 1rem;
+}
+.pricing__card code {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.pricing__card span {
+  font-weight: 400;
+  font-size: 1rem;
+  color: hsl(180, 30%, 76%);
+}
+.pricing__card p {
+  color: var(--Gray_mid);
+}
+.pricing__card button {
+  color: white;
+  background-color: var(--Green_400);
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  border: none;
+  box-shadow: 0px 0px 3px rgb(83, 77, 77);
 }
 
 .explainer {
+  padding: 1.8rem;
   background-color: var(--Teal_400);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.explainer h2 {
+  font-size: 1rem;
+}
+.explainer p {
+  color: var(--Teal_100);
+  text-align: left;
+  font-size: 0.9rem;
+  padding-right: 5rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 40rem) {
+  main {
+    width: 40rem;
+  }
+  .pricing {
+    color: white;
+    flex-direction: row;
+  }
+
+  .pricing__card {
+    width: 50%;
+  }
+
+  .explainer {
+    width: 50%;
+  }
 }
